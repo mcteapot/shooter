@@ -4,6 +4,8 @@
 
 // ## Movement Functions
 
+var mouseX;
+
 function onDocumentMouseDown( event ) {
 
 	event.preventDefault();
