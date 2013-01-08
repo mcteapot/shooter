@@ -1,14 +1,7 @@
-<<<<<<< HEAD
-# Gyant Robot
 
-Fight off hordes of alien invader scum!
-
-How long can you survive the the onslaught?!
-=======
 # Shooter
 
 tutorial on gamedev with three.js
->>>>>>> updates to push
 
 ## History
 
@@ -18,13 +11,7 @@ Wanted to make a game and protoyping in WebGl and three.js
 
 This guy made this:
 
-
-<<<<<<< HEAD
-[Matt Hackett](http://www.cyborgdino.com/): Art, Design & Programming
-=======
 [Cyborg Dino](http://www.cyborgdino.com/): Art, Design & Programming
->>>>>>> updates to push
-
 
 ## License
 
