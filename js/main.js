@@ -8,19 +8,44 @@ if ( ! Detector.webgl ) Detector.addGetWebGLMessage();
 // Variables
 var SCREEN_WIDTH = window.innerWidth;
 var SCREEN_HEIGHT = window.innerHeight;
+<<<<<<< HEAD
 var SHADOW_MAP_WIDTH = 2048;
 var SHADOW_MAP_HEIGHT = 1024;
+=======
+>>>>>>> updates to push
 
 var container, stats;
 
 var camera, scene, renderer, objects;
 var particleLight, pointLight;
+<<<<<<< HEAD
 		
 var cameraTarget;
+=======
+
+
+var windowHalfX = window.innerWidth / 2;
+var windowHalfY = window.innerHeight / 2;
+
+var ship;
+>>>>>>> updates to push
 
 var targetRotation = 0;
 var targetRotationOnMouseDown = 0;
 
+<<<<<<< HEAD
+=======
+
+
+//callbackShip   = function( geometry ) { creategGeometry( geometry,  0, 0, 0, 0.05 ) };
+// Load 3d objects
+var loader = new THREE.JSONLoader();
+loader.load( "./assets/ship.js", function( geometry ) {
+	ship = creategGeometry( geometry,  0, 0, 0, 0.05 );
+	
+	init();
+	animate()
+>>>>>>> updates to push
 
 var windowHalfX = window.innerWidth / 2;
 var windowHalfY = window.innerHeight / 2;
@@ -31,6 +56,7 @@ var mouseX = 0;
 var mouseY = 0;
 
 
+<<<<<<< HEAD
 
 //callbackShip   = function( geometry ) { creategGeometry( geometry,  0, 0, 0, 0.05 ) };
 // Load 3d objects
@@ -39,6 +65,8 @@ var loader = new THREE.JSONLoader();
 
 	init();
 	animate()
+=======
+>>>>>>> updates to push
 // ## Initialize everything
 function init() {
 
@@ -130,6 +158,7 @@ function init() {
 		scene.add( robotEyes );
 	} );
 
+<<<<<<< HEAD
 	
 	// Lights
 	//scene.add( new THREE.AmbientLight( 0xcccccc ) );
@@ -151,6 +180,11 @@ function init() {
 	pointLight02.rotation.set(0,0,0);
 	pointLight02.scale.set(1,1,1);
 	scene.add( pointLight02 );
+=======
+	// Renderer
+	renderer = new THREE.WebGLRenderer( { antialias: true } );
+	renderer.setSize( SCREEN_WIDTH, SCREEN_HEIGHT );
+>>>>>>> updates to push
 
 	// WindowResize resizes screan according to screen
 	THREEx.WindowResize(renderer, camera);
@@ -165,10 +199,23 @@ function init() {
 	stats.domElement.style.top = '0px';
 	container.appendChild( stats.domElement );
 
+<<<<<<< HEAD
 	document.addEventListener( 'mousedown', onDocumentMouseDown, false );
 	document.addEventListener( 'touchstart', onDocumentTouchStart, false );
 	document.addEventListener( 'touchmove', onDocumentTouchMove, false );
 } //init()
+=======
+}
+
+
+function creategGeometry( geometry, x, y, z, b ) {
+
+	zmesh = new THREE.Mesh( geometry, new THREE.MeshFaceMaterial() );
+	zmesh.position.set( x, y, z );
+	zmesh.scale.set( b, b, b);
+	zmesh.overdraw = true;
+	return zmesh;
+>>>>>>> updates to push
 
 
 // ## Animate and Display the Scene
